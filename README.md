@@ -72,28 +72,28 @@ ${OpenROAD_binary_path}/openroad -python convert_ng45.py
 #### Communication between Bookshelf (*.aux, *.scl, *.nodes, *.route, *.nets, *.pl, *.shapes) and OpenDB
 - Standard physical design data model (LEF/DEF) formats -> OpenDB
 
-The central database in RosettaStone is OpenDB. The following script creates OpenDB from LEF/DEF formats.
+  The central database in RosettaStone is OpenDB. The following script creates OpenDB from LEF/DEF formats.
 
-```shell
-cd odbComm
-${OpenROAD_binary_path}/openroad -python make_odb.py
-```
-Below is an example of the user-defined Settings section located at the top of the script. 
-By adding designs to the design_list, you can create multiple OpenDB instances, one per design.
+  ```shell
+  cd odbComm
+  ${OpenROAD_binary_path}/openroad -python make_odb.py
+  ```
+  Below is an example of the user-defined Settings section located at the top of the script. 
+  By adding designs to the design_list, you can create multiple OpenDB instances, one per design.
 
-```shell
-################ Settings #################
-# Platform for ODB generation
-platform = 'sky130hd'
-# Contest name
-contest = 'ISPD2006'
-# OpenROAD-flow-scripts path
-orfs_path = '../OpenROAD-flow-scripts'
-# Benchmark path (for DEF)
-bench_path = '../bench'
+  ```shell
+  ################ Settings #################
+  # Platform for ODB generation
+  platform = 'sky130hd'
+  # Contest name
+  contest = 'ISPD2006'
+  # OpenROAD-flow-scripts path
+  orfs_path = '../OpenROAD-flow-scripts'
+  # Benchmark path (for DEF)
+  bench_path = '../bench'
 
-# LEF lists
-lef_list = [ 
+  # LEF lists
+  lef_list = [ 
     '%s/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef' %
     orfs_path,
     '%s/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef' %
@@ -106,64 +106,63 @@ lef_list = [
      contest,
      design,
      design),
-]
-# Design List
-design_list = ['adaptec1', \
-               ]   
-###########################################
-```
+  ]
+  # Design List
+  design_list = ['adaptec1']   
+  ###########################################
+  ```
 
 
 - OpenDB -> Bookshelf conversion
 
-Creating Bookshelf format files from OpenDB.
-```shell
-cd odbComm
-${OpenROAD_binary_path}/openroad -python convert_odb2bookshelf.py
-```
-Below is an example of the user-defined Settings section located at the bottom of the script. 
-```shell
-    ################ Settings #################
-    odbPath = './odbFiles/'
+  Creating Bookshelf format files from OpenDB.
+  ```shell
+  cd odbComm
+  ${OpenROAD_binary_path}/openroad -python convert_odb2bookshelf.py
+  ```
+  Below is an example of the user-defined Settings section located at the bottom of the script. 
+  ```shell
+  ################ Settings #################
+  odbPath = './odbFiles/'
 
-    # The number of sites for cell padding (+left, +right)
-    cellPaddings = [0, 1, 2, 3, 4]
+  # The number of sites for cell padding (+left, +right)
+  cellPaddings = [0, 1, 2, 3, 4]
     
-    # Format list of Bookshelf to be created
-    modeFormats = ['ISPD04', 'ISPD11']
+  # Format list of Bookshelf to be created
+  modeFormats = ['ISPD04', 'ISPD11']
     
-    # OpenDB list for Bookshelf generation
-    odbList = [ 
-        'sky130hd_ISPD2006_adaptec1',
-    ]   
+  # OpenDB list for Bookshelf generation
+  odbList = [ 
+    'sky130hd_ISPD2006_adaptec1',
+  ]   
 
-    # Layer capacity adjustment tcl file for global routing
-    #layerCapacity = 'layeradjust_sky130hd.tcl'
-    layerCapacity = 'layeradjust_empty.tcl'
-    ###########################################   
-```
+  # Layer capacity adjustment tcl file for global routing
+  #layerCapacity = 'layeradjust_sky130hd.tcl'
+  layerCapacity = 'layeradjust_empty.tcl'
+  ###########################################   
+  ```
 
 - Bookshelf -> OpenDB upload
 
-Uploading from the Bookshelf file produced by the academic tool into OpenDB. The following script creates OpenDB and DEF format files.
-```shell
-cd odbComm
-${OpenROAD_binary_path}/openroad -python convert_bookshelf2odb.py
-```
-Below is an example of the user-defined Settings section located at the bottom of the script.  
-```shell
-    ################ Settings #################
-    odbPath = './odbFiles'
+  Uploading from the Bookshelf file produced by the academic tool into OpenDB. The following script creates OpenDB and DEF format files.
+  ```shell
+  cd odbComm
+  ${OpenROAD_binary_path}/openroad -python convert_bookshelf2odb.py
+  ```
+  Below is an example of the user-defined Settings section located at the bottom of the script.  
+  ```shell
+  ################ Settings #################
+  odbPath = './odbFiles'
 
-    # The number of sites for cell padding (+left, +right)
-    cellPaddings = [0, 1, 2, 3, 4]
+  # The number of sites for cell padding (+left, +right)
+  cellPaddings = [0, 1, 2, 3, 4]
 
-    # Format list of Bookshelf to be uploaded
-    modeFormats = ['ISPD04', 'ISPD11']
+  # Format list of Bookshelf to be uploaded
+  modeFormats = ['ISPD04', 'ISPD11']
 
-    # OpenDB list for Bookshelf upload
-    odbList = [ 
-        'sky130hd_ISPD2006_adaptec1',
-    ]   
-    ###########################################
-```
+  # OpenDB list for Bookshelf upload
+  odbList = [ 
+      'sky130hd_ISPD2006_adaptec1',
+  ]   
+  ###########################################
+  ```
