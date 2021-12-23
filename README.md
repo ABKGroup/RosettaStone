@@ -17,7 +17,7 @@ This project provides the following:
         - Cell padding for global placement
         - Layer capacity adjustments for global routing
   
-3. Sharing of 36 academic benchmarks integrated with real open-source technologies.
+3. Sharing of 35 academic benchmarks integrated with real open-source technologies.
 
 
 ## Supported Benchmark Conversion List.
@@ -29,7 +29,7 @@ This project provides the following:
     - NanGate45
 
 - Bookshelf benchmarks
-    - ISPD05 (adaptec1-4, bigblue1-5)
+    - ISPD05 (adaptec1-4, bigblue1-4)
     - ISPD06 (adaptec5, newblue1-7)
     - ISPD11 (superblue{1, 2, 4, 5, 10, 12, 15, 18}) 
     - DAC2012 (superblue{2, 3, 5, 6, 7, 9, 11, 12, 14, 16, 19}) 
