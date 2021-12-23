@@ -31,8 +31,8 @@ This project provides the following:
 - Bookshelf benchmarks
     - ISPD05 (adaptec1-4, bigblue1-5)
     - ISPD06 (adaptec5, newblue1-7)
-    - ISPD11 (superblue) 
-    - DAC2012 (superblue) 
+    - ISPD11 (superblue{1, 2, 4, 5, 10, 12, 15, 18}) 
+    - DAC2012 (superblue{2, 3, 5, 6, 7, 9, 11, 12, 14, 16, 19}) 
 
 ## Supported Academic Tool List.
 
