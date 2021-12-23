@@ -1,7 +1,7 @@
 # RosettaStone
 This repository contains **RosettaStone**, which leverages a standard physical design data model (LEF/DEF 5.8) and open-source database implementation ([OpenDB](https://github.com/The-OpenROAD-Project/OpenROAD/blob/master/src/odb/README.md) in [OpenROAD](https://github.com/The-OpenROAD-Project/OpenROAD)) to effectively connect the academic physical design field's past, present and future. RosettaStone's shared data model enables richer integrations, flow contexts, and assessments for research. 
 
-RosettaStone in theory works with any technology, and we have validated RosettaStone using four open-source technologies ASAP7, NanGate45, SkyWater130HS/HD). 
+RosettaStone in theory works with any technology, and we have validated RosettaStone using four open-source technologies ASAP7, NanGate45 and SkyWater130HS/HD). 
 This project provides the following:
 1. Integration of academic Bookshelf benchmarks into real open-source technologies (ASAP7, NanGate45, SKY130HD, SKY130HS). 
     - Supports ISPD05, ISPD06, ISPD11, DAC2012 benchmark conversions
