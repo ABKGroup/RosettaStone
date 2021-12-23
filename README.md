@@ -37,9 +37,13 @@ This project provides the following:
 ## Supported Academic Tool List.
 
 - Placement 
-    - NTUPlace3
-    - NTUPlace4h
-    - RePlAce
+    - NTUPlace3 (global, detailed)
+    - NTUPlace4h (global, detailed)
+    - RePlAce (global)
+    - OpenDP (detailed)
+
+- CTS
+    - TritonCTS
 
 - Global Routing
     - FastRoute
