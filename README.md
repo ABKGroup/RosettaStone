@@ -17,7 +17,7 @@ This project provides the following:
         - Cell padding for global placement
         - Layer capacity adjustments for global routing
   
-3. Sharing more than 30 academic benchmarks integrated with real open-source technologies.
+3. Sharing of 36 academic benchmarks integrated with real open-source technologies.
 
 
 ## Supported Benchmark Conversion List.
