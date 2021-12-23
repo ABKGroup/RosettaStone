@@ -72,14 +72,14 @@ ${OpenROAD_binary_path}/openroad -python convert_ng45.py
 #### Communication between Bookshelf (*.aux, *.scl, *.nodes, *.route, *.nets, *.pl, *.shapes) and OpenDB
 - Standard physical design data model (LEF/DEF) formats -> OpenDB
 
-The central database in RosettaStone is OpenDB. This script creates OpenDB from LEF/DEF formats.
+The central database in RosettaStone is OpenDB. The following script creates OpenDB from LEF/DEF formats.
 
 ```shell
 cd odbComm
 ${OpenROAD_binary_path}/openroad -python make_odb.py
 ```
-Below is a sample of the setting section defined by the user located at the top of the script. 
-By adding designs to the design_list, you can create multiple designs of OpenDB.
+Below is an example of the user-defined Settings section located at the top of the script. 
+By adding designs to the design_list, you can create multiple OpenDB instances, one per design.
 
 ```shell
 ################ Settings #################
@@ -121,7 +121,7 @@ Creating Bookshelf format files from OpenDB.
 cd odbComm
 ${OpenROAD_binary_path}/openroad -python convert_odb2bookshelf.py
 ```
-Below is a sample of the setting section defined by the user located at the bottom of the script. 
+Below is an example of the user-defined Settings section located at the bottom of the script. 
 ```shell
     ################ Settings #################
     odbPath = './odbFiles/'
@@ -145,12 +145,12 @@ Below is a sample of the setting section defined by the user located at the bott
 
 - Bookshelf -> OpenDB upload
 
-Uploading the Bookshelf file that passed through the academic tool to OpenDB. This script creates OpenDB and DEF format files.
+Uploading from the Bookshelf file that produced by the academic tool into OpenDB. The following script creates OpenDB and DEF format files.
 ```shell
 cd odbComm
 ${OpenROAD_binary_path}/openroad -python convert_bookshelf2odb.py
 ```
-Below is a sample of the setting section defined by the user located at the bottom of the script. 
+Below is an example of the user-defined Settings section located at the bottom of the script.  
 ```shell
     ################ Settings #################
     odbPath = './odbFiles'
