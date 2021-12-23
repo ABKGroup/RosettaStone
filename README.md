@@ -145,7 +145,7 @@ Below is an example of the user-defined Settings section located at the bottom o
 
 - Bookshelf -> OpenDB upload
 
-Uploading from the Bookshelf file that produced by the academic tool into OpenDB. The following script creates OpenDB and DEF format files.
+Uploading from the Bookshelf file produced by the academic tool into OpenDB. The following script creates OpenDB and DEF format files.
 ```shell
 cd odbComm
 ${OpenROAD_binary_path}/openroad -python convert_bookshelf2odb.py
