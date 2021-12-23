@@ -129,7 +129,7 @@ Below is an example of the user-defined Settings section located at the bottom o
     # The number of sites for cell padding (+left, +right)
     cellPaddings = [0, 1, 2, 3, 4]
     
-    # Format list of Bookshelf to be created.
+    # Format list of Bookshelf to be created
     modeFormats = ['ISPD04', 'ISPD11']
     
     # OpenDB list for Bookshelf generation
@@ -158,10 +158,10 @@ Below is an example of the user-defined Settings section located at the bottom o
     # The number of sites for cell padding (+left, +right)
     cellPaddings = [0, 1, 2, 3, 4]
 
-    # Format list of Bookshelf to be created
+    # Format list of Bookshelf to be uploaded
     modeFormats = ['ISPD04', 'ISPD11']
 
-    # OpenDB list for Bookshelf generation
+    # OpenDB list for Bookshelf upload
     odbList = [ 
         'sky130hd_ISPD2006_adaptec1',
     ]   
