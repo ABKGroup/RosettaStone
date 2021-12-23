@@ -3,12 +3,12 @@ This repository contains **RosettaStone**, which leverages a standard physical d
 
 RosettaStone in theory works with any technology, and we have validated RosettaStone using three open-source technologies ASAP7, NanGate45 and SkyWater130). 
 This project provides the following:
-1. Integration academic Bookshelf benchmarks into real open-source technologies (ASAP7, NanGate45, SKY130HD, SKY130HS). 
+1. Integration of academic Bookshelf benchmarks into real open-source technologies (ASAP7, NanGate45, SKY130HD, SKY130HS). 
     - Supports ISPD05, ISPD06, ISPD11, DAC2012 benchmark conversions
     - Used odbpy python module from OpenROAD binary
     - Flow consists of 1) OpenDB for std cell mapping and 2) OpenSTA for logic loop breaking
   
-2. Converter toolkits to run Bookshelf-based academy tools using OpenDB/OpenROAD.
+2. Converter toolkits to run Bookshelf-based academic tools using OpenDB/OpenROAD.
     - Supporting communication between Bookshelf (*.aux, *.scl, *.nodes, *.route, *.nets, *.pl, *.shapes) and OpenDB
     - OpenDB generation script from LEF/DEF formats
     - OpenDB to Bookshelf converter
@@ -34,7 +34,7 @@ This project provides the following:
     - ISPD11 (superblue) 
     - DAC2012 (superblue) 
 
-## Supported Academy Tool List.
+## Supported Academic Tool List.
 
 - Placement 
     - NTUPlace3
@@ -58,7 +58,7 @@ A complied binary of [OpenROAD](https://github.com/The-OpenROAD-Project/OpenROAD
 
 ### How to Run
 
-#### Integration academic Bookshelf benchmarks into real open-source technologies (ASAP7, NanGate45, SKY130HD, SKY130HS)
+#### Integration of academic Bookshelf benchmarks into real open-source technologies (ASAP7, NanGate45, SKY130HD, SKY130HS)
 To integrate academic Bookshelf benchmarks into real open-source technologies for a standard physical design data model (LEF/DEF), users can run scripts in the `benchGen` directory.
 ```shell
 cd benchGen
@@ -68,7 +68,7 @@ ${OpenROAD_binary_path}/openroad -python convert_ng45.py
 #### Communication between Bookshelf (*.aux, *.scl, *.nodes, *.route, *.nets, *.pl, *.shapes) and OpenDB
 - Standard physical design data model (LEF/DEF) formats -> OpenDB
 
-The central database in RosettaStone is OpenDB. This script create OpenDB from LEF/DEF formats.
+The central database in RosettaStone is OpenDB. This script creates OpenDB from LEF/DEF formats.
 
 ```shell
 cd odbComm
@@ -141,7 +141,7 @@ Below is a sample of the setting section defined by the user located at the bott
 
 - Bookshelf -> OpenDB upload
 
-Uploading the Bookshelf file that passed through the academy tool to OpenDB. This script creates OpenDB and DEF format files.
+Uploading the Bookshelf file that passed through the academic tool to OpenDB. This script creates OpenDB and DEF format files.
 ```shell
 cd odbComm
 ${OpenROAD_binary_path}/openroad -python convert_bookshelf2odb.py
