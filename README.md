@@ -52,6 +52,14 @@ This project provides the following:
 - Detailed Routing 
     - TritonRoute
 
+## Timing Sensible Benchmark List
+- [SKY130HD/adaptec1](bench/sky130hd/ISPD2006_adaptec1/adaptec1.timing_lc_25.def.gz)
+- [SKY130HD/newblue2](bench/sky130hd/ISPD2006_newblue2/newblue2.timing_lc_25.def.gz)
+- [NanGate45/bigblue1](bench/ng45/ISPD2006_bigblue1/bigblue1.timing_lc_25.def.gz)
+- [NanGate45/superblue18](bench/ng45/ISPD2011_superblue18/superblue18.timing_lc_75.def.gz)
+- [ASAP7/superblue16](bench/asap7/DAC2012_superblue16/superblue16.timing_lc_25.def.gz)
+- TODO: Update all timing sensible benchmarks
+
 ## Getting Started
 
 ### Prerequisite
