@@ -126,4 +126,5 @@ puts "Total $cnt nets are created to break loops"
 
 write_verilog ./${design}.v
 write_def ./${design}.def
+write_db ./${design}.loop_break.db
 exit
