@@ -1,4 +1,4 @@
-# RosettaStone
+# RosettaStone: Connecting the Past, Present and Future of Physical Design Research
 This repository contains **RosettaStone**, which leverages a standard physical design data model (LEF/DEF 5.8) and open-source database implementation ([OpenDB](https://github.com/The-OpenROAD-Project/OpenROAD/blob/master/src/odb/README.md) in [OpenROAD](https://github.com/The-OpenROAD-Project/OpenROAD)) to effectively connect the academic physical design field's past, present and future. RosettaStone's shared data model enables richer integrations, flow contexts, and assessments for research. 
 
 RosettaStone in theory works with any technology, and we have validated RosettaStone using four open-source technologies ASAP7, NanGate45 and SkyWater130HS/HD). 
@@ -53,7 +53,7 @@ This project provides the following:
     - TritonRoute
 
 ## Timing Sensible Benchmark Generation
-- We updated our benchmarks further to have sensible timing results. Our timing logic cutting flow improves weird timing results from the old academic benchmarks. For the detailed explanation, please check the section 3 from our paper and scripts ([]) 
+- We updated our benchmarks further to have sensible timing results. Our timing logic cutting flow improves weird timing results from the old academic benchmarks. For the detailed explanation, please check the section 3 from our paper and script [break_timing_path.tcl](benchGen/break_timing_path_ng45.tcl).
 - All timing results are available in [BenchmarkTiming.md](BenchmarkTiming.md)
 
 ## Getting Started
@@ -170,7 +170,8 @@ ${OpenROAD_binary_path}/openroad -python convert_ng45.py
   ]   
   ###########################################
   ```
-  
-  ### References
-  
+
+
+### References
+- Please cite the following paper when you reference this repository.
   - A. B. Kahng, M. Kim, S. Kim and M. Woo, "RosettaStone: Connecting the Past, Present and Future of Physical Design Research", IEEE Design & Test (2022), to appear.
