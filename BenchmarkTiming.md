@@ -1,4 +1,9 @@
-| Design (PDK / Academic Bookshelf)   | Before Arrival Time (ns)     | Before # Stage on the Worst Timing Path | After Arrival Time (ns) | After # Stage on the Worst Timing Path |
+# Timing Comparison Between pre-logic cutting and post-logic cutting.
+- "PreLC" means pre-logic cutting. (before the [break_timing_path.tcl](benchGen/break_timing_path_ng45.tcl))
+- "PostLC" means post-logic cutting. (after the [break_timing_path.tcl](benchGen/break_timing_path_ng45.tcl))
+- Note that all timing results were measured using OpenSTA with PrePlace engine. We followed the commercial tool's PrePlace timing convention. (e.g., ignoring timing paths for every net where fanout is >= 100).
+
+| Design (PDK / Academic Bookshelf)   | PreLC Effective Clock Periods (ns)     | PreLC # Stage on the Worst Timing Path | PostLC Effective Clock Periods (ns) | PostLC # Stage on the Worst Timing Path |
 |:------------------------------------|----------------------:|-----------------:|---------------------:|----------------:|
 | asap7/DAC2012_superblue11           |                 70.47 |             2497 |                 2.37 |              27 |
 | asap7/DAC2012_superblue12           |                  3.91 |              141 |                 3.11 |              20 |
