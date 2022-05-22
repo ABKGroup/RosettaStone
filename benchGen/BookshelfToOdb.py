@@ -187,6 +187,7 @@ class BookshelfToOdb:
       ffClkPinList = None,
       clkNetName = "clk",
       # minFFWidth = 20,
+      targetFFRatio = 0.12,
       customFPRatio = 1.0):
 
     self.odbpy = opendbpy
@@ -197,7 +198,7 @@ class BookshelfToOdb:
     self.ffClkPinList = ffClkPinList
     self.clkNetName = clkNetName
     # self.minFFWidth = minFFWidth 
-    self.targetFFRatio = 0.12
+    self.targetFFRatio = targetFFRatio
     self.customFPRatio = customFPRatio
 
     # *.shape determine

@@ -12,8 +12,9 @@ def PreProcessNanGate45(db, ffClkPinList):
 
 db = odb.dbDatabase.create()
 
-odb.read_lef(db, "NangateOpenCellLibrary.tech.lef")
-odb.read_lef(db, "NangateOpenCellLibrary.macro.rect.lef")
+lefDir = ""
+odb.read_lef(db, "%s/NangateOpenCellLibrary.tech.lef" % (lefDir))
+odb.read_lef(db, "%s/NangateOpenCellLibrary.macro.rect.lef" % (lefDir))
 
 PreProcessNanGate45(db, ['CK'])
 
@@ -28,7 +29,7 @@ bs = BookshelfToOdb( opendbpy = odb,
     primaryLayer = 'metal3', 
     mastersFileName = 'cellList_ng45.txt',
     ffClkPinList = ['CK'],
-    customFPRatio = 2.0)
+    customFPRatio = 1.2)
 
 bs.WriteMacroLef('%s_macro.lef' %(design))
 
