@@ -174,4 +174,4 @@ ${OpenROAD_binary_path}/openroad -python convert_ng45.py
 
 ### References
 - Please cite the following paper when you reference this repository.
-  - A. B. Kahng, M. Kim, S. Kim and M. Woo, "RosettaStone: Connecting the Past, Present and Future of Physical Design Research", IEEE Design & Test (2022), to appear.
+  - A. B. Kahng, M. Kim, S. Kim and M. Woo, "RosettaStone: Connecting the Past, Present and Future of Physical Design Research", IEEE Design & Test (2022), [Link](https://vlsicad.ucsd.edu/Publications/Journals/j139.pdf).
