@@ -1,12 +1,8 @@
-import odbpy as odb
+import odb
 import os
 import datetime
 import math
 from math import gcd
-import namemap
-
-#import opendbpy as odb
-
 
 class BookshelfToOdb:
     def __init__(
@@ -48,6 +44,10 @@ class BookshelfToOdb:
         with open(self.plFile, 'r') as inFile:
             for line in inFile:
                 if len(line) < 3:
+                    continue
+                if line.strip().startswith("UCLA"):
+                    continue
+                if line.strip().startswith("#"):
                     continue
                 elif ':' not in line:
                     continue

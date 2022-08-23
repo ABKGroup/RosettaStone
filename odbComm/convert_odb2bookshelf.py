@@ -1,10 +1,8 @@
-#import opendbpy as odb
-import odbpy as odb
+import odb
 import os
 import datetime
 import math
 from math import gcd
-import namemap
 
 
 class OdbToBookshelf:
@@ -126,7 +124,7 @@ class OdbToBookshelf:
     def WriteNodes(self, bsName):
         print("Writing .nodes")
         f = open('./output/%s/%s.nodes' % (bsName, bsName), 'w')
-        f.write('UCSD nodes 1.0\n')
+        f.write('UCLA nodes 1.0\n')
         f.write(
             '# Created  :  %s  %s %s\n' %
             (self.month, self.day, self.year))
@@ -214,7 +212,7 @@ class OdbToBookshelf:
     def WriteRoute(self, bsName):
         print("Writing .route")
         f = open('./output/%s/%s.route' % (bsName, bsName), 'w')
-        f.write('UCSD route 1.0\n')
+        f.write('UCLA route 1.0\n')
         f.write(
             '# Created  :  %s  %s %s\n' %
             (self.month, self.day, self.year))
@@ -435,7 +433,7 @@ class OdbToBookshelf:
     def WriteWts(self, bsName):
         print("Writing .wts")
         f = open('./output/%s/%s.wts' % (bsName, bsName), 'w')
-        f.write('UCSD wts 1.0\n')
+        f.write('UCLA wts 1.0\n')
         f.write(
             '# Created  :  %s  %s %s\n' %
             (self.month, self.day, self.year))
@@ -445,7 +443,7 @@ class OdbToBookshelf:
     def WriteNets(self, bsName):
         print("Writing .nets")
         f = open('./output/%s/%s.nets' % (bsName, bsName), 'w')
-        f.write('UCSD nets 1.0\n')
+        f.write('UCLA nets 1.0\n')
         f.write(
             '# Created  :  %s  %s %s\n' %
             (self.month, self.day, self.year))
@@ -531,16 +529,15 @@ class OdbToBookshelf:
                         #
                         # "getGeomShape().getPoints()" --> a, b, c, d, a
                         #
-                        #tx = 0
-                        #ty = 0
-                        t = odb.dbTransform(instOrient, instOrig)
+                        rr = odb.Rect(box.xMin(), box.yMin(), box.xMax(), box.yMax())
+                        
                         # Calculate center of pin
-                        for pp in box.getGeomShape().getPoints()[:-1]:
+                        for pp in rr.getPoints():
                             t.apply(pp)
-                            tx = tx + float(pp.getX())
-                            ty = ty + float(pp.getY())
-                            #print("tx, ty = %s %s"%(pp.getX()/1000,pp.getY()/1000))
-                            tt = tt + 1
+                            tt += 1
+                            tx += float(pp.getX())
+                            ty += float(pp.getY())
+
 
                 iPinXCen = float(tx) / float(tt)
                 iPinYCen = float(ty) / float(tt)
@@ -562,7 +559,7 @@ class OdbToBookshelf:
     def WritePl(self, bsName):
         print("Writing .pl")
         f = open('./output/%s/%s.pl' % (bsName, bsName), 'w')
-        f.write('UCSD pl 1.0\n')
+        f.write('UCLA pl 1.0\n')
         f.write(
             '# Created  :  %s  %s %s\n' %
             (self.month, self.day, self.year))
@@ -624,7 +621,7 @@ class OdbToBookshelf:
     def WriteScl(self, bsName):
         print("Writing .scl")
         f = open('./output/%s/%s.scl' % (bsName, bsName), 'w')
-        f.write('UCSD scl 1.0\n')
+        f.write('UCLA scl 1.0\n')
         f.write(
             '# Created  :  %s  %s %s\n' %
             (self.month, self.day, self.year))
@@ -718,7 +715,7 @@ class OdbToBookshelf:
     def WriteShapes(self, bsName):
         print("Writing .shapes")
         f = open('./output/%s/%s.shapes' % (bsName, bsName), 'w')
-        f.write('UCSD shapes 1.0\n')
+        f.write('UCLA shapes 1.0\n')
         f.write(
             '# Created  :  %s  %s %s\n' %
             (self.month, self.day, self.year))
